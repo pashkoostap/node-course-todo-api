@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "todo-app",
+		"_postman_id": "1accd6b8-1224-45b7-8ae6-c44098ddbb0b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /todos",
+			"request": {
+				"url": "{{url}}/todos/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\": \"new todo 4\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos",
+			"request": {
+				"url": "{{url}}/todos/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\": \"new todo 1\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos:id",
+			"request": {
+				"url": "{{url}}/todos/590479ce6a4b1b07e8d0d39b",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\": \"new todo 1\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /todos:id",
+			"request": {
+				"url": "{{url}}/todos/59049ab424388703b8bd0389",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\": \"new todo 1\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /todos/:id",
+			"request": {
+				"url": "{{url}}/todos/",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"text\": \"new todo from osta 1p\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
