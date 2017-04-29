@@ -17,7 +17,6 @@ app.post('/todos', (req, res) => {
   const todo = new Todo({
     text: req.body.text
   });
-
   todo.save().then((doc) => {
     res.send(doc);
   }, (err) => {
