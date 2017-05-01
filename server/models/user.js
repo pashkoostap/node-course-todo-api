@@ -32,7 +32,24 @@ const UserSchema = new mongoose.Schema({
   }]
 });
 
-UserSchema.methods.toJSON = function () { 
+UserSchema.statics.findByToken = function (token) {
+  let User = this;
+  let decoded;
+
+  try {
+    decoded = jwt.verify(token, 'secret');
+  } catch (e) {
+    return Promise.reject('no auth user');
+  }
+
+  return User.findOne({
+    _id: decoded._id,
+    'tokens.token': token,
+    'tokens.access': 'auth'
+  })
+};
+
+UserSchema.methods.toJSON = function () {
   let user = this;
   let userObject = user.toObject();
 
